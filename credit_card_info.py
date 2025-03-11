@@ -33,7 +33,7 @@ print(yesterday_str)
 
 
 
-df_card = pd.read_csv("C:\\Users\\1105179\\Downloads\\credit_card_info\\プリぺ_デビットリスト.csv",encoding="cp932")
+df_card = pd.read_csv("C:\\Users\\ユーザー名\\Downloads\\credit_card_info\\プリぺ_デビットリスト.csv",encoding="cp932")
 
 # ### クレカリストを準備
 # MAX_RETRIES = 3  # 最大リトライ回数
@@ -81,7 +81,7 @@ df_card = pd.read_csv("C:\\Users\\1105179\\Downloads\\credit_card_info\\プリ�
 
 
 ### クレカの情報を取りに行く
-flp = r"\\f-hikari02\コンシューマ事業本部\アライアンス事業部\03 アライアンス営業部GM以上\格納_契約書\○0-業務管理用\00_データ共有\江黒さん\credit_card_info"
+flp = r"\\sample\credit_card_info"
 folder_path = os.path.join(flp, folder_name)
 
 ### 当月のフォルダが存在しない場合、新しく作成
@@ -95,12 +95,12 @@ else:
 
 driver=webdriver.Firefox()
 driver.set_window_size(1024,1000)
-driver.get('https://knp01.mul-pay.jp/mulpayconsole/site/mst2000031211/login')
+driver.get('https://card_info/login')
 driver.maximize_window()
 
 
-USERNAME  = 'thinq'
-PASSWORD  = 'thinq2025_02'
+USERNAME  = 'user'
+PASSWORD  = 'pass'
 
 ### ログイン用
 username_input = driver.find_element(By.XPATH,'//*[@id="username"]')
